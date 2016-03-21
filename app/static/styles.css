@@ -1,14 +1,23 @@
 h1{
-  font-family: 'Schoolbell', cursive;
-  }
- 
-header h1{
+    font-family: 'Schoolbell', cursive;
     text-align: center;
+  }
+
+h2  {
+    text-align:center;
     }
 
-h2{
-text-align:center;
-}
+
+p   {
+    margin: 25px 75px;
+    }
+
+#img1 {
+    width: 500px; 
+    height: 300px; 
+    margin: 25px 100px;
+`   }
+
 /* USE THE FOLLOWING TWO RULES FOR RESPONSIVE GOODNESS*/
 
 div.embed-container { 
@@ -42,17 +51,16 @@ figure {
 figcaption{
 }
 
-p.link{
-        width:640px;
-        margin:0 auto;
+p.link  {
+        width: auto;
         align: center;
-}
+        }
 
 footer{
     text-align: center;
     background-color: #f96e5b;
     color: #fff;
-    margin-bottom: 2em;
+    margin-bottom: auto;
 }
 
 footer a{
@@ -129,7 +137,7 @@ footer a:hover {
     aside{
         float: right;
         width: 31.914893%;
-       /* border-left: 1px solid black;*/
+        /*border: 1px solid black;*/
         min-height: 400px;
     }
     

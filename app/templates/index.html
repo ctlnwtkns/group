@@ -1,21 +1,42 @@
-<!-- extend from base layout -->
-{% extends "base.html" %}
-
-{% block content %}
-<header>
-    <h1>Welcome to your journey!</h1>
-</header>
-<section>
-     <h2>What is your name?</h2>
-        <form align="center" action="" method="POST">
+<html>
+    <head>
+        <link href='https://fonts.googleapis.com/css?family=Schoolbell' rel='stylesheet' type='text/css' />
+         {% if title %}
+        <title>
+            {{ title }} - Goepotatodementer's Final Project
+        </title>
+        {% else %}
+        <title>
+            Welcome to Our Final Project
+        </title>
+        {% endif %}
+        
+        <meta charset="utf-8" />
+        <meta name="robots" content="noindex,nofollow" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="../static/styles.css" />
+        <link rel="python" href="../views.py"/>
+    </head>
+<body>
+    <header>
+        <h1>Welcome to your journey!</h1>
+    </header>
+    <section>
+        <h2>What is your name?</h2>
+            <form align="center" action="" method="POST">
             <p><input type="text" name="name" value="{{ request.form.username }}"></p>
             <p><input type="submit" value="Continue"></p>
-        </form>
-    {% if error %}
-    <p><strong>Error:</strong>{{ error }}</p>
-    {% endif %}
-</section>
-{% endblock %}
-
+            </form>
+        {% if error %}
+        <p><strong>Error:</strong>{{ error }}</p>
+        {% endif %}
+    </section>
+    <footer>
+        <small>
+        &copy; 2016, All Rights Reserved ~ Authored by Karla Haigh, Caitlin Watkins, Scott C, and Calvin Calvo
+        </small>
+    </footer>   
+</body>
+</html>
 
     
