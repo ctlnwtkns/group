@@ -7,11 +7,16 @@
 </header>
 <section>
     <h1>What is your name?</h1>
-        <form action="" method="post" name="login">
+        <form action="" method="POST">
             {{ form.hidden_tag() }}
-            {{ form.openid(size=20) }}
-        <p><input type="submit" value="Continue"></p>
+        <p><input type="text" name="name" value="{{request.form.username}}"></p>
+        <p><input type="submit" value="Continue">
         </form>
+    {% if error %}
+    <p><strong>Error:</strong>{{ error }}</p>
+    {% endif %}
 </section>
 {% endblock %}
+
+
     
