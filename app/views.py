@@ -3,7 +3,9 @@ from app import app
 from .forms import LoginForm
 
 @app.route('/')
-
+def home():
+    return redirect('/index')
+    
 @app.route('/index', methods=['GET', 'POST'])           
 def index():
     form = LoginForm()
@@ -13,9 +15,6 @@ def index():
             error = 'Please enter your name.'
         else:
             return redirect('/greet')
-    if form.validate_on_submit():
-        flash('Login requested for OpenID="%s"' % form.openid.data)
-        return redirect('/greet')
     return render_template('index.html', 
                             title='Index',
                             form=form
