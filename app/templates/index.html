@@ -6,11 +6,10 @@
     <h1>Welcome to your journey!</h1>
 </header>
 <section>
-    <h1>What is your name?</h1>
-        <form action="" method="POST">
-            {{ form.hidden_tag() }}
-        <p><input type="text" name="name" value="{{request.form.username}}"></p>
-        <p><input type="submit" value="Continue">
+     <h2>What is your name?</h2>
+        <form align="center" action="" method="POST">
+            <p><input type="text" name="name" value="{{ request.form.username }}"></p>
+            <p><input type="submit" value="Continue"></p>
         </form>
     {% if error %}
     <p><strong>Error:</strong>{{ error }}</p>
