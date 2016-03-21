@@ -6,7 +6,7 @@ from .forms import LoginForm
 def home():
     return redirect('/index')
     
-@app.route('/index', methods=['GET', 'POST'])           
+@app.route('/index', methods=['GET', 'POST'])
 def index():
     form = LoginForm()
     error = None
