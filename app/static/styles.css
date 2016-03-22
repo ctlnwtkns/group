@@ -1,21 +1,22 @@
-h1{
+h1, h2{
     font-family: 'Schoolbell', cursive;
     text-align: center;
   }
-
-h2  {
-    text-align:center;
-    }
-
 
 p   {
     margin: 25px 75px;
     }
 
 #img1 {
-    width: 500px; 
+    width:  500px; 
     height: 300px; 
     margin: 25px 100px;
+`   }
+
+#img2 {
+    width:  100px; 
+    height: 100px; 
+    margin: 25px 300px;
 `   }
 
 /* USE THE FOLLOWING TWO RULES FOR RESPONSIVE GOODNESS*/
@@ -60,7 +61,7 @@ footer{
     text-align: center;
     background-color: #f96e5b;
     color: #fff;
-    margin-bottom: auto;
+    margin-bottom: 2em;
 }
 
 footer a{

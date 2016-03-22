@@ -33,7 +33,7 @@
         
     <aside>
         <table>
-            <caption><h3>Your Stats and Special Items</h3></caption>
+            <caption><h2>Your Stats and Special Items</h2></caption>
             <tr>
                 <td>    
                     <img src="../static/images/heart.jpg" alt="heart health"/>
@@ -44,7 +44,14 @@
                 <td><img src="../static/images/hungry.jpg" alt="hunger"/>  <p>{{ hunger}}</p></td>
             </tr>
             <tr>
-                <td><img src="../static/images/backpack.jpg" alt="special items"/><p>{{ stash }} </p></td>
+                <td><img src="../static/images/backpack.jpg" alt="special items"/>
+                    <p>{% if stash != None %}
+                            {% for i in backpack %}
+                                {{ stash.index(i) }}
+                            {% endfor %}
+                        {% endif %}
+                    </p>
+                </td>
             </tr>
         </table>
     </aside>
