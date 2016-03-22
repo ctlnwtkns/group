@@ -45,7 +45,7 @@
             </tr>
             <tr>
                 <td><img src="../static/images/backpack.jpg" alt="special items"/>
-                    <p>{% if stash != None %}
+                    <p>{% if stash %}
                             {% for i in backpack %}
                                 {{ stash.index(i) }}
                             {% endfor %}
